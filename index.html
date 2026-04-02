@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unique Perfumes | Essence of Elegance</title>
     <style>
-        /* Modern Reset & Minimalism */
+        /* Modern Reset & Minimalism - Focus on BW Style */
         * {
             margin: 0;
             padding: 0;
@@ -20,9 +20,9 @@
             overflow-x: hidden;
         }
 
-        /* Header & Logo (The "Nono" Size) */
+        /* Header & The NEW Logo (Maintained at Nono Size) */
         header {
-            padding: 20px 5%;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -34,10 +34,9 @@
         }
 
         .logo img {
-            width: 80px; /* حجم نونو وشيك */
+            width: 130px; /* New logo slightly larger text but still 'Nono' and elegant */
             height: auto;
-            /* الحركة دي بتحاول تشيل الخلفية المربعات لو اللوجو أسود */
-            mix-blend-mode: multiply; 
+            display: block;
         }
 
         nav ul {
@@ -63,14 +62,14 @@
             opacity: 0.5;
         }
 
-        /* Hero Section */
+        /* Hero Section - Sauvage remain main feature */
         .hero {
             height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: #f9f9f9;
+            background: #ffffff; /* Clean white back */
             padding: 0 5%;
         }
 
@@ -93,7 +92,7 @@
             margin-bottom: 20px;
         }
 
-        /* Collection Grid */
+        /* Collection Grid - Expanded with NEW bottles */
         .section-title {
             text-align: center;
             padding: 80px 0 40px;
@@ -105,10 +104,10 @@
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2px;
-            background-color: #eee; /* Thin lines between items */
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+            gap: 2px; /* Thin, elegant lines between items */
+            background-color: #f1f1f1; /* Super subtle line color */
+            border-top: 1px solid #f1f1f1;
+            border-bottom: 1px solid #f1f1f1;
         }
 
         .product-card {
@@ -116,6 +115,7 @@
             padding: 40px;
             text-align: center;
             transition: 0.4s;
+            position: relative;
         }
 
         .product-card:hover {
@@ -133,12 +133,15 @@
             font-size: 14px;
             letter-spacing: 1px;
             font-weight: 400;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
         }
 
         .product-card p {
             font-size: 12px;
             color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         /* Minimal Button */
@@ -160,7 +163,7 @@
             color: #fff;
         }
 
-        /* Footer */
+        /* Footer - Black and White for contrast */
         footer {
             padding: 100px 5%;
             background: #000;
@@ -169,8 +172,7 @@
         }
 
         .footer-logo img {
-            width: 60px;
-            filter: invert(1); /* يخلي اللوجو أبيض في الفوتر الأسود */
+            width: 100px; /* Footer logo, elegant and inverted */
             margin-bottom: 30px;
         }
 
@@ -183,6 +185,7 @@
             width: 300px;
             text-align: center;
             outline: none;
+            letter-spacing: 1px;
         }
 
         .copyright {
@@ -197,57 +200,74 @@
 
     <header>
         <div class="logo">
-            <img src="Gemini_Generated_Image_5gyefd5gyefd5gye.png" alt="Unique Perfumes">
+            <img src="Gemini_Generated_Image_p1g50gp1g50gp1g5.png" alt="Unique Perfumes Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#">Collection</a></li>
                 <li><a href="#">The Atelier</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Essence</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-content">
-            <img src="b016407e99debf0bdc0136d339751f44.jpg" alt="Sauvage">
-            <h1>The Signature Scent</h1>
-            <p>Defining the essence of the modern individual.</p>
+            <img src="b016407e99debf0bdc0136d339751f44.jpg" alt="Dior Sauvage">
+            <h1>Signature Collection</h1>
+            <p>Defining elegance in every scent.</p>
             <a href="#" class="btn">Discover More</a>
         </div>
     </section>
 
-    <h2 class="section-title">Curated Selection</h2>
+    <h2 class="section-title">The Curated Gallery</h2>
     
     <div class="grid">
+        
+        <div class="product-card">
+            <img src="210be87b5a8e0f592657e235e160a26e.jpg" alt="Yves Saint Laurent">
+            <h3>Yves Saint Laurent</h3>
+            <p>EAU DE PARFUM INTENSE</p>
+        </div>
+        <div class="product-card">
+            <img src="45af609c1584c20e28ac61326bd609e9.jpg" alt="Spicebomb Extreme">
+            <h3>Viktor & Rolf</h3>
+            <p>SPICEBOMB EXTREME</p>
+        </div>
+        <div class="product-card">
+            <img src="57022d4168c4ae193f47e335520e03e5.jpg" alt="Valentino Uomo">
+            <h3>VALENTINO</h3>
+            <p>UOMO BORN IN ROMA INTENSE</p>
+        </div>
+
         <div class="product-card">
             <img src="e1c1e42f2a94711da49686e8b171b6f6.jpg" alt="Jean Paul Gaultier">
-            <h3>LE MALE LE PARFUM</h3>
-            <p>Intense & Sophisticated</p>
+            <h3>LE MALE</h3>
+            <p>LE PARFUM</p>
         </div>
         <div class="product-card">
             <img src="ef4fcda30a8be27a848eb98e7275fa58.jpg" alt="Versace Eros">
-            <h3>VERSACE EROS</h3>
-            <p>Passion & Desire</p>
+            <h3>Versace</h3>
+            <p>EROS</p>
         </div>
         <div class="product-card">
             <img src="2c0ad02e3e7619b20ad0d8333fc21937.jpg" alt="YSL MYSLF">
             <h3>YSL MYSLF</h3>
-            <p>Unapologetically Yourself</p>
+            <p>PARFUM</p>
         </div>
-        <div class="product-card">
+         <div class="product-card">
             <img src="f4b310938c9391058623879c5834188b.jpg" alt="YSL">
             <h3>YSL L'HOMME</h3>
-            <p>Timeless Elegance</p>
+            <p>EAU DE TOILETTE</p>
         </div>
     </div>
 
     <footer>
         <div class="footer-logo">
-             <img src="Gemini_Generated_Image_5gyefd5gyefd5gye.png" alt="Unique Perfumes">
+            <img src="Gemini_Generated_Image_p1g50gp1g50gp1g5.png" alt="Unique Perfumes Logo" style="filter: invert(1);">
         </div>
         <div class="newsletter">
-            <p style="margin-bottom: 20px; font-weight: 200;">JOIN THE EXCLUSIVE LIST</p>
+            <p style="margin-bottom: 20px; font-weight: 200;">STAY INFORMED ON OUR ESSENCE</p>
             <input type="email" placeholder="EMAIL ADDRESS">
         </div>
         <p class="copyright">UNIQUE PERFUMES © 2026. ALL RIGHTS RESERVED.</p>
