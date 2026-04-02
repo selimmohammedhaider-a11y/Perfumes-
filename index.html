@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Perfumes | Luxury Collection</title>
+    <title>Unique Perfumes | Essence of Elegance</title>
     <style>
-        /* CSS Reset & Minimalist Feel */
+        /* General Reset for Minimalist Look */
         * {
             margin: 0;
             padding: 0;
@@ -19,29 +19,32 @@
             line-height: 1.6;
         }
 
-        /* Top Bar Info */
+        /* Top Notification Bar */
         .top-bar {
             background: #000;
             color: #fff;
             text-align: center;
-            padding: 8px 0;
+            padding: 10px 0;
             font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        /* Header Layout - Big Logo */
+        /* Header - Bigger Logo & No Blog */
         header {
             padding: 30px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #f2f2f2;
             background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo img {
-            width: 250px; /* اللوجو كبير وفخم */
+            width: 280px; /* اللوجو كبير وواضح جداً */
             height: auto;
             display: block;
         }
@@ -52,23 +55,22 @@
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin-left: 35px;
         }
 
         nav ul li a {
             text-decoration: none;
             color: #000;
-            font-size: 12px;
+            font-size: 13px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 400;
         }
 
         /* Hero Image Layout */
         .hero {
             width: 100%;
             height: auto;
-            overflow: hidden;
         }
 
         .hero img {
@@ -81,8 +83,8 @@
         .about-section {
             display: flex;
             align-items: center;
-            padding: 80px 10%;
-            gap: 50px;
+            padding: 100px 10%;
+            gap: 60px;
         }
 
         .about-image {
@@ -92,7 +94,7 @@
         .about-image img {
             width: 100%;
             max-width: 500px;
-            box-shadow: 15px 15px 0px #f4f4f4;
+            box-shadow: 20px 20px 0px #f9f9f9;
         }
 
         .about-content {
@@ -100,105 +102,120 @@
         }
 
         .about-content h2 {
-            font-size: 30px;
-            letter-spacing: 5px;
-            margin-bottom: 20px;
+            font-size: 32px;
+            letter-spacing: 6px;
+            margin-bottom: 25px;
             text-transform: uppercase;
+            font-weight: 300;
         }
 
-        /* Product Grid Layout */
+        .about-content p {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Product Grid - Full Collection */
         .products-container {
-            padding: 60px 5%;
+            padding: 80px 5%;
             text-align: center;
+            background: #fff;
         }
 
         .section-title {
-            font-size: 24px;
+            font-size: 26px;
             letter-spacing: 8px;
             text-transform: uppercase;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
             font-weight: 300;
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
         }
 
         .product-card {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            opacity: 0.7;
         }
 
         .product-card img {
             width: 100%;
-            height: 350px;
+            height: 400px;
             object-fit: contain;
-            background: #fafafa;
-            margin-bottom: 15px;
+            background: #fdfdfd;
+            margin-bottom: 20px;
         }
 
         .product-card h3 {
-            font-size: 14px;
+            font-size: 15px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .product-card p {
             font-size: 12px;
-            color: #666;
+            color: #888;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        /* Footer - No Blog Links */
+        /* Footer - Minimalist Black */
         footer {
             background: #000;
             color: #fff;
-            padding: 80px 5% 30px;
+            padding: 100px 5% 40px;
             text-align: center;
         }
 
         .footer-logo img {
-            width: 180px;
+            width: 200px;
             filter: invert(1);
             margin-bottom: 40px;
         }
 
-        .footer-links {
+        .footer-nav {
             margin-bottom: 40px;
         }
 
-        .footer-links a {
+        .footer-nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 11px;
+            margin: 0 20px;
+            font-size: 12px;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
 
         .copy {
             font-size: 10px;
-            color: #444;
+            color: #555;
             letter-spacing: 1px;
-            margin-top: 50px;
+            margin-top: 60px;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
 
-    <div class="top-bar">WORLDWIDE SHIPPING AVAILABLE</div>
+    <div class="top-bar">Free Shipping on all Premium Collections</div>
 
     <header>
         <div class="logo">
-            <img src="9038.png" alt="Unique Perfumes">
+            <img src="9038.png" alt="Unique Perfumes Logo">
         </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="#">Shop Collection</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -206,67 +223,90 @@
     </header>
 
     <section class="hero">
-        <img src="b016407e99debf0bdc0136d339751f44.jpg" alt="Dior Sauvage Main">
+        <img src="b016407e99debf0bdc0136d339751f44.jpg" alt="Dior Sauvage Main Feature">
     </section>
 
     <section class="about-section">
         <div class="about-image">
-            <img src="2c0ad02e3e7619b20ad0d8334fc21937.jpg" alt="About Unique Perfumes">
+            <img src="2c0ad02e3e7619b20ad0d8334fc21937.jpg" alt="Unique Perfumes Brand">
         </div>
         <div class="about-content">
-            <h2>About Unique</h2>
-            <p>Experience the pinnacle of luxury with our curated collection of international fragrances. We believe that a scent is more than a perfume; it is your identity.</p>
+            <h2>Our Story</h2>
+            <p>At Unique Perfumes, we believe in the power of scent to transform and define. Our curated collection brings together the most prestigious fragrances from around the world.</p>
+            <p>Experience elegance in its purest form.</p>
         </div>
     </section>
 
     <section class="products-container">
-        <h2 class="section-title">The Collection</h2>
+        <h2 class="section-title">The Complete Gallery</h2>
         <div class="product-grid">
+            
             <div class="product-card">
-                <img src="9041.jpg" alt="Spicebomb">
-                <h3>Viktor & Rolf</h3>
-                <p>Spicebomb Extreme</p>
+                <img src="9041.jpg" alt="Viktor & Rolf">
+                <h3>Spicebomb Extreme</h3>
+                <p>Intense Fragrance</p>
             </div>
+
             <div class="product-card">
-                <img src="9040.jpg" alt="MYSLF">
-                <h3>Yves Saint Laurent</h3>
-                <p>MYSLF Eau De Parfum</p>
+                <img src="9040.jpg" alt="YSL">
+                <h3>MYSLF Eau De Parfum</h3>
+                <p>Yves Saint Laurent</p>
             </div>
+
             <div class="product-card">
                 <img src="9039.jpg" alt="Valentino">
-                <h3>Valentino</h3>
-                <p>Uomo Born In Roma</p>
+                <h3>Uomo Born In Roma</h3>
+                <p>Valentino Intense</p>
             </div>
+
+            <div class="product-card">
+                <img src="9035.jpg" alt="Signature 9035">
+                <h3>Royal Reserve</h3>
+                <p>Limited Edition</p>
+            </div>
+
             <div class="product-card">
                 <img src="9030.jpg" alt="9030">
-                <h3>Elite Scent</h3>
-                <p>Exclusive Edition</p>
+                <h3>Midnight Essence</h3>
+                <p>Private Collection</p>
             </div>
+
             <div class="product-card">
                 <img src="9031.jpg" alt="9031">
-                <h3>Midnight Bloom</h3>
-                <p>Intense Collection</p>
+                <h3>Pure Aromatic</h3>
+                <p>Eau De Parfum</p>
             </div>
+
             <div class="product-card">
                 <img src="9032.jpg" alt="9032">
                 <h3>Velvet Oud</h3>
-                <p>Luxury Reserve</p>
+                <p>Luxury Series</p>
             </div>
+
             <div class="product-card">
                 <img src="9033.jpg" alt="9033">
-                <h3>Ocean Mist</h3>
-                <p>Fresh Series</p>
+                <h3>Oceanic Mist</h3>
+                <p>Fresh Edition</p>
             </div>
+
             <div class="product-card">
-                <img src="9035.jpg" alt="9035">
-                <h3>Royal Essence</h3>
-                <p>The Masterpiece</p>
+                <img src="e1c1e42f2a94711da49686e8b171b6f6.jpg" alt="JPG">
+                <h3>Le Male</h3>
+                <p>Jean Paul Gaultier</p>
             </div>
+
             <div class="product-card">
-                <img src="9036.jpg" alt="9036">
-                <h3>Aromatic Note</h3>
-                <p>Classic Collection</p>
+                <img src="ef4fcda30a8be27a848eb98e7275fa58.jpg" alt="Versace">
+                <h3>Eros Intense</h3>
+                <p>Versace Homme</p>
             </div>
+
+            <div class="product-card">
+                <img src="f4b310938c9391058623879c5834188b.jpg" alt="YSL L'Homme">
+                <h3>L'Homme</h3>
+                <p>Yves Saint Laurent</p>
+            </div>
+
         </div>
     </section>
 
@@ -274,14 +314,13 @@
         <div class="footer-logo">
             <img src="9038.png" alt="Unique Perfumes">
         </div>
-        <div class="footer-links">
+        <div class="footer-nav">
+            <a href="#">Shipping & Returns</a>
             <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Shipping Policy</a>
+            <a href="#">Terms of Use</a>
         </div>
         <p class="copy">© 2026 UNIQUE PERFUMES. ALL RIGHTS RESERVED.</p>
     </footer>
 
 </body>
 </html>
-
