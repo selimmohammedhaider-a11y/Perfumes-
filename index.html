@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Perfumes | Premium Fragrances</title>
+    <title>Unique Perfumes | Official Store</title>
     <style>
         /* Modern Reset & Minimalism */
         * {
@@ -19,7 +19,7 @@
             line-height: 1.6;
         }
 
-        /* Header - Logo size updated to be bigger */
+        /* Header - Logo updated to 9038.png and made BIGGER */
         header {
             padding: 25px 5%;
             display: flex;
@@ -33,7 +33,7 @@
         }
 
         .logo img {
-            width: 180px; /* كبرنا اللوجو هنا عشان يبقى واضح وفخم */
+            width: 250px; /* حجم اللوجو كبر عشان يبقى فخم وواضح */
             height: auto;
             display: block;
         }
@@ -50,7 +50,7 @@
         nav ul li a {
             text-decoration: none;
             color: #000;
-            font-size: 12px;
+            font-size: 13px;
             letter-spacing: 2px;
             text-transform: uppercase;
             font-weight: 400;
@@ -58,13 +58,13 @@
         }
 
         nav ul li a:hover {
-            color: #888;
+            opacity: 0.5;
         }
 
         .cart-btn {
             font-size: 12px;
             border: 1px solid #000;
-            padding: 8px 15px;
+            padding: 10px 20px;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
@@ -95,14 +95,14 @@
             text-align: center;
             font-size: 24px;
             font-weight: 300;
-            letter-spacing: 6px;
+            letter-spacing: 8px;
             text-transform: uppercase;
             margin-bottom: 50px;
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
 
@@ -112,13 +112,9 @@
             padding: 20px;
         }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
         .product-card img {
             width: 100%;
-            height: 350px;
+            height: 380px;
             object-fit: contain;
             margin-bottom: 20px;
             background: #fdfdfd;
@@ -137,30 +133,19 @@
             text-transform: uppercase;
         }
 
-        .price {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
         /* Footer */
         footer {
             background: #000;
             color: #fff;
-            padding: 80px 5%;
+            padding: 100px 5% 50px;
             text-align: center;
             margin-top: 50px;
         }
 
         .footer-logo img {
-            width: 120px;
-            filter: invert(1);
-            margin-bottom: 30px;
-        }
-
-        .footer-nav {
-            margin-bottom: 30px;
+            width: 180px; /* اللوجو في الفوتر كمان كبرناه */
+            filter: invert(1); /* عشان يبان أبيض على الخلفية السوداء */
+            margin-bottom: 40px;
         }
 
         .footer-nav a {
@@ -168,7 +153,7 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 11px;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
             text-transform: uppercase;
         }
 
@@ -176,7 +161,8 @@
             font-size: 10px;
             color: #555;
             letter-spacing: 1px;
-            margin-top: 40px;
+            margin-top: 60px;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -189,7 +175,7 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="#">Shop All</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -198,54 +184,41 @@
     </header>
 
     <section class="hero">
-        <img src="b016407e99debf0bdc0136d339751f44.jpg" class="hero-img" alt="Signature Scent">
+        <img src="b016407e99debf0bdc0136d339751f44.jpg" class="hero-img" alt="Sauvage Dior Signature">
     </section>
 
     <section class="section-container">
-        <h2 class="section-title">The Complete Collection</h2>
-        
+        <h2 class="section-title">Best Sellers</h2>
         <div class="product-grid">
             <div class="product-card">
-                <img src="9041.jpg" alt="Spicebomb Extreme">
+                <img src="9041.jpg" alt="Spicebomb">
                 <h3>Viktor & Rolf</h3>
                 <p>Spicebomb Extreme</p>
-                <span class="price">$149.00 USD</span>
             </div>
-
+            <div class="product-card">
+                <img src="9040.jpg" alt="YSL">
+                <h3>Yves Saint Laurent</h3>
+                <p>MYSLF EDP</p>
+            </div>
             <div class="product-card">
                 <img src="9039.jpg" alt="Valentino">
                 <h3>Valentino</h3>
                 <p>Uomo Born In Roma</p>
-                <span class="price">$149.00 USD</span>
             </div>
+        </div>
+    </section>
 
-            <div class="product-card">
-                <img src="9040.jpg" alt="YSL">
-                <h3>Yves Saint Laurent</h3>
-                <p>MYSLF Eau De Parfum</p>
-                <span class="price">$149.00 USD</span>
-            </div>
-
-            <div class="product-card">
-                <img src="e1c1e42f2a94711da49686e8b171b6f6.jpg" alt="Jean Paul Gaultier">
-                <h3>Jean Paul Gaultier</h3>
-                <p>Le Male Le Parfum</p>
-                <span class="price">$149.00 USD</span>
-            </div>
-
-            <div class="product-card">
-                <img src="ef4fcda30a8be27a848eb98e7275fa58.jpg" alt="Versace Eros">
-                <h3>Versace</h3>
-                <p>Eros Intense</p>
-                <span class="price">$149.00 USD</span>
-            </div>
-
-            <div class="product-card">
-                <img src="f4b310938c9391058623879c5834188b.jpg" alt="YSL L'Homme">
-                <h3>YSL</h3>
-                <p>L'Homme Edition</p>
-                <span class="price">$149.00 USD</span>
-            </div>
+    <section class="section-container" style="padding-top: 0;">
+        <h2 class="section-title">Explore Collection</h2>
+        <div class="product-grid">
+            <div class="product-card"><img src="9030.jpg" alt="Fragrance 1"><h3>Luxury Scent</h3><p>Elite Collection</p></div>
+            <div class="product-card"><img src="9031.jpg" alt="Fragrance 2"><h3>Aromatic Note</h3><p>Pure Essence</p></div>
+            <div class="product-card"><img src="9032.jpg" alt="Fragrance 3"><h3>Midnight Oud</h3><p>Private Edition</p></div>
+            <div class="product-card"><img src="9033.jpg" alt="Fragrance 4"><h3>Bloom Intense</h3><p>Night Wear</p></div>
+            <div class="product-card"><img src="9035.jpg" alt="Fragrance 5"><h3>Royal Mist</h3><p>Limited Reserve</p></div>
+            <div class="product-card"><img src="e1c1e42f2a94711da49686e8b171b6f6.jpg" alt="JPG"><h3>Jean Paul Gaultier</h3><p>Le Male</p></div>
+            <div class="product-card"><img src="ef4fcda30a8be27a848eb98e7275fa58.jpg" alt="Versace"><h3>Versace</h3><p>Eros</p></div>
+            <div class="product-card"><img src="f4b310938c9391058623879c5834188b.jpg" alt="YSL Homme"><h3>YSL</h3><p>L'Homme</p></div>
         </div>
     </section>
 
@@ -254,8 +227,8 @@
             <img src="9038.png" alt="Unique Perfumes">
         </div>
         <div class="footer-nav">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
             <a href="#">Shipping</a>
         </div>
         <p class="copy">© 2026 UNIQUE PERFUMES. ALL RIGHTS RESERVED.</p>
@@ -263,3 +236,4 @@
 
 </body>
 </html>
+
