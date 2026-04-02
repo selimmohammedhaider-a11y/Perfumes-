@@ -1,232 +1,265 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unique Perfumes | Official Store</title>
+    <title>Unique Perfumes | Premium Fragrances</title>
     <style>
-        /* الأساسيات - Minimalist BW */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #000; line-height: 1.4; }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-        img { max-width: 100%; display: block; }
+        /* Modern Reset & Minimalism */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        /* الهيدر - Logo size "Nono" */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000;
+            line-height: 1.6;
+        }
+
+        /* Header - Logo size updated to be bigger */
         header {
-            padding: 20px 5%;
+            padding: 25px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #f0f0f0;
-            background: #fff;
+            border-bottom: 1px solid #f2f2f2;
             position: sticky;
             top: 0;
+            background: white;
             z-index: 1000;
         }
-        .logo img {
-            width: 90px; /* حجم نونو وشيك جداً */
-            height: auto;
-        }
-        nav ul { display: flex; gap: 25px; }
-        nav ul li a { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
-        nav ul li a:hover { color: #888; }
-        .cart-btn { font-size: 11px; letter-spacing: 1px; border: 1px solid #000; padding: 8px 15px; text-transform: uppercase; }
 
-        /* السلايدر الكبير (Hero) */
+        .logo img {
+            width: 180px; /* كبرنا اللوجو هنا عشان يبقى واضح وفخم */
+            height: auto;
+            display: block;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 35px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #888;
+        }
+
+        .cart-btn {
+            font-size: 12px;
+            border: 1px solid #000;
+            padding: 8px 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
         .hero {
-            position: relative;
-            height: 85vh;
-            background: #f9f9f9;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            background: #fff;
+            padding: 40px 5%;
         }
-        .hero img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 0.9; }
-        .hero-text {
-            position: relative;
-            z-index: 2;
+
+        .hero-img {
+            max-width: 900px;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Best Sellers & Full Collection */
+        .section-container {
+            padding: 80px 5%;
+        }
+
+        .section-title {
             text-align: center;
-            color: #fff;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
         }
-        .hero-text h1 { font-size: 3rem; font-weight: 200; letter-spacing: 10px; text-transform: uppercase; margin-bottom: 20px; }
-        .hero-text button { background: transparent; border: 1px solid #fff; color: #fff; padding: 12px 35px; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* قسم About Us - نفس تقسيم الصورة */
-        .about {
-            display: flex;
-            padding: 80px 10%;
-            align-items: center;
-            gap: 50px;
-        }
-        .about-img { flex: 1; position: relative; }
-        .about-img::after { content: ''; position: absolute; top: 20px; left: -20px; width: 100%; height: 100%; border: 1px solid #eee; z-index: -1; }
-        .about-content { flex: 1; }
-        .about-content h2 { font-size: 12px; letter-spacing: 5px; color: #888; margin-bottom: 15px; }
-        .about-content h3 { font-size: 24px; font-weight: 300; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 2px; }
-        .about-content p { font-size: 14px; color: #444; margin-bottom: 30px; line-height: 1.8; max-width: 450px; }
-
-        /* شبكة المنتجات (Popular Products) */
-        .products { padding: 80px 5%; text-align: center; }
-        .section-title { font-size: 20px; letter-spacing: 6px; text-transform: uppercase; font-weight: 300; margin-bottom: 50px; }
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
         }
-        .product-card { text-align: center; padding: 20px; transition: 0.3s; }
-        .product-card:hover { transform: translateY(-5px); }
-        .product-card img { height: 250px; object-fit: contain; margin: 0 auto 20px; }
-        .product-card h4 { font-size: 12px; font-weight: 400; letter-spacing: 1px; margin-bottom: 10px; height: 35px; overflow: hidden; }
-        .product-card span { font-weight: bold; font-size: 14px; display: block; margin-top: 10px; }
 
-        /* قسم المدونة (Blog Posts) */
-        .blog { padding: 80px 5%; background: #fafafa; }
-        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .blog-item { background: #fff; border: 1px solid #eee; padding-bottom: 20px; text-align: center; }
-        .blog-item img { width: 100%; height: 200px; object-fit: cover; margin-bottom: 20px; }
-        .blog-item h5 { font-size: 13px; font-weight: 500; padding: 0 15px; margin-bottom: 10px; text-transform: uppercase; }
-        .blog-item p { font-size: 12px; color: #777; padding: 0 20px; margin-bottom: 15px; }
-        .blog-link { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; border-bottom: 1px solid #000; padding-bottom: 2px; }
+        .product-card {
+            text-align: center;
+            transition: 0.3s;
+            padding: 20px;
+        }
 
-        /* الفوتر - Black Footer */
-        footer { background: #000; color: #fff; padding: 80px 5% 40px; }
-        .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1.5fr 1.5fr; gap: 40px; margin-bottom: 60px; }
-        .footer-col h6 { font-size: 12px; letter-spacing: 3px; margin-bottom: 25px; text-transform: uppercase; }
-        .footer-col ul li { margin-bottom: 10px; font-size: 12px; color: #aaa; }
-        .newsletter input { background: transparent; border: 1px solid #333; padding: 10px; color: #fff; width: 70%; font-size: 12px; }
-        .newsletter button { background: #fff; color: #000; border: none; padding: 10px 20px; font-size: 10px; cursor: pointer; text-transform: uppercase; }
-        .copy { text-align: center; border-top: 1px solid #222; padding-top: 30px; font-size: 10px; color: #555; letter-spacing: 1px; }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
 
-        /* Buttons */
-        .btn-black { background: #000; color: #fff; border: none; padding: 12px 30px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; }
+        .product-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            background: #fdfdfd;
+        }
+
+        .product-card h3 {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .product-card p {
+            font-size: 12px;
+            color: #777;
+            text-transform: uppercase;
+        }
+
+        .price {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 80px 5%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .footer-logo img {
+            width: 120px;
+            filter: invert(1);
+            margin-bottom: 30px;
+        }
+
+        .footer-nav {
+            margin-bottom: 30px;
+        }
+
+        .footer-nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 11px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .copy {
+            font-size: 10px;
+            color: #555;
+            letter-spacing: 1px;
+            margin-top: 40px;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">
-            <img src="Gemini_Generated_Image_k7rwmgk7rwmgk7rw.png" alt="Unique Perfumes Logo">
+            <img src="9038.png" alt="Unique Perfumes">
         </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <a href="#" class="cart-btn">Cart (0)</a>
+        <div class="cart-btn">Cart (0)</div>
     </header>
 
     <section class="hero">
-        <img src="b016407e99debf0bdc0136d339751f44.jpg" alt="Dior Sauvage Hero">
-        <div class="hero-text">
-            <h1>L'Essence de Luxe</h1>
-            <button>Explore Collection</button>
-        </div>
+        <img src="b016407e99debf0bdc0136d339751f44.jpg" class="hero-img" alt="Signature Scent">
     </section>
 
-    <section class="about">
-        <div class="about-img">
-            <img src="2c0ad02e3e7619b20ad0d8334fc21937.jpg" alt="YSL MYSLF About">
-        </div>
-        <div class="about-content">
-            <h2>ABOUT UNIQUE</h2>
-            <h3>Crafting Memories in Every Drop</h3>
-            <p>Unique Perfumes is more than a boutique; it's a sanctuary for the senses. We curate the world's most prestigious scents to help you define your presence without saying a word.</p>
-            <button class="btn-black">Read Our Story</button>
-        </div>
-    </section>
-
-    <section class="products">
-        <h2 class="section-title">Popular Products</h2>
+    <section class="section-container">
+        <h2 class="section-title">The Complete Collection</h2>
+        
         <div class="product-grid">
             <div class="product-card">
-                <img src="e1c1e42f2a94711da49686e8b171b6f6.jpg" alt="JPG Le Male">
-                <h4>Jean Paul Gaultier - Le Male</h4>
-                <span>$149.00 USD</span>
+                <img src="9041.jpg" alt="Spicebomb Extreme">
+                <h3>Viktor & Rolf</h3>
+                <p>Spicebomb Extreme</p>
+                <span class="price">$149.00 USD</span>
             </div>
+
+            <div class="product-card">
+                <img src="9039.jpg" alt="Valentino">
+                <h3>Valentino</h3>
+                <p>Uomo Born In Roma</p>
+                <span class="price">$149.00 USD</span>
+            </div>
+
+            <div class="product-card">
+                <img src="9040.jpg" alt="YSL">
+                <h3>Yves Saint Laurent</h3>
+                <p>MYSLF Eau De Parfum</p>
+                <span class="price">$149.00 USD</span>
+            </div>
+
+            <div class="product-card">
+                <img src="e1c1e42f2a94711da49686e8b171b6f6.jpg" alt="Jean Paul Gaultier">
+                <h3>Jean Paul Gaultier</h3>
+                <p>Le Male Le Parfum</p>
+                <span class="price">$149.00 USD</span>
+            </div>
+
             <div class="product-card">
                 <img src="ef4fcda30a8be27a848eb98e7275fa58.jpg" alt="Versace Eros">
-                <h4>Versace Eros Intense</h4>
-                <span>$149.00 USD</span>
+                <h3>Versace</h3>
+                <p>Eros Intense</p>
+                <span class="price">$149.00 USD</span>
             </div>
+
             <div class="product-card">
                 <img src="f4b310938c9391058623879c5834188b.jpg" alt="YSL L'Homme">
-                <h4>YSL L'Homme Eau</h4>
-                <span>$149.00 USD</span>
-            </div>
-            <div class="product-card">
-                <img src="67d768e23d4213fb3cb187a9dbc14fa2.jpg" alt="Valentino Uomo">
-                <h4>Valentino Uomo Born In Roma</h4>
-                <span>$149.00 USD</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="blog">
-        <h2 class="section-title">Blog Posts</h2>
-        <div class="blog-grid">
-            <div class="blog-item">
-                <img src="1226defd48cb9074c0782732d3556b90.jpg" alt="Blog 1">
-                <h5>The Art of Choosing Your Scent</h5>
-                <p>Discover the secrets behind notes and how they react with your skin.</p>
-                <a href="#" class="blog-link">View Full Article</a>
-            </div>
-            <div class="blog-item">
-                <img src="816eb3374d37a57960a9290b14d3ae68.jpg" alt="Blog 2">
-                <h5>New Summer Collections</h5>
-                <p>Explore the fresh and floral scents arriving this season.</p>
-                <a href="#" class="blog-link">View Full Article</a>
-            </div>
-            <div class="blog-item">
-                <img src="b016407e99debf0bdc0136d339751f44.jpg" alt="Blog 3">
-                <h5>Night vs Day Fragrances</h5>
-                <p>How to transition your signature scent from morning to night.</p>
-                <a href="#" class="blog-link">View Full Article</a>
+                <h3>YSL</h3>
+                <p>L'Homme Edition</p>
+                <span class="price">$149.00 USD</span>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h6>About Us</h6>
-                <ul>
-                    <li>Our Heritage</li>
-                    <li>The Atelier</li>
-                    <li>Careers</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h6>Quick Links</h6>
-                <ul>
-                    <li>Privacy Policy</li>
-                    <li>Contact Us</li>
-                    <li>FAQ</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h6>Find Us</h6>
-                <p style="font-size: 12px; color: #777;">123 Elegance St, Luxury District.<br>Call Us: (000) 123456</p>
-            </div>
-            <div class="footer-col newsletter">
-                <h6>News & Updates</h6>
-                <input type="email" placeholder="Enter your email">
-                <button>Sign Up</button>
-            </div>
+        <div class="footer-logo">
+            <img src="9038.png" alt="Unique Perfumes">
         </div>
-        <div class="copy">
-            COPYRIGHT © 2026 UNIQUE PERFUMES. ALL RIGHTS RESERVED.
+        <div class="footer-nav">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Shipping</a>
         </div>
+        <p class="copy">© 2026 UNIQUE PERFUMES. ALL RIGHTS RESERVED.</p>
     </footer>
 
 </body>
-            </html>
-
-
+</html>
