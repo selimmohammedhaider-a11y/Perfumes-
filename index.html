@@ -8,35 +8,44 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #fff; color: #000; scroll-behavior: smooth; }
 
-        /* Navigation - Fixed and Shorter */
+        /* Navigation - Shorter and Cleaner */
         header {
-            padding: 10px 5%; /* تقليل الارتفاع */
+            padding: 5px 5%; /* قللنا المسافة جداً عشان يبقى رفيع */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(255, 255, 255, 0.95); /* خلفية بيضاء شفافة بسيطة */
-            position: fixed; /* تثبيت الهيدر في سقف الصفحة */
+            background: #fff;
+            position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
+            height: 70px; /* ثبتنا الارتفاع عشان نتحكم فيه */
             border-bottom: 1px solid #f0f0f0;
-            backdrop-filter: blur(10px); /* تأثير زجاجي فخم */
-            transition: 0.3s;
         }
         
-        /* تصغير حجم اللوجو ليناسب الهيدر الجديد */
-        .logo img { width: 160px; height: auto; }
+        /* كبرنا اللوجو وخليناه يملى المساحة */
+        .logo {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .logo img { 
+            height: 120px; /* كبرنا الطول جداً */
+            width: auto;
+            object-fit: contain;
+            margin-top: 5px; /* تظبيط مكان اللوجو */
+        }
         
         nav ul { display: flex; list-style: none; }
         nav ul li { margin-left: 30px; }
         nav ul li a { text-decoration: none; color: #000; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; }
 
-        /* Hero Section - Added margin to compensate for fixed header */
+        /* Hero Section */
         .hero {
             position: relative;
             width: 100%;
             height: 80vh;
-            margin-top: 60px; /* مسافة عشان الهيدر ميتغطيش عليه */
+            margin-top: 70px; /* نفس ارتفاع الهيدر الجديد */
             overflow: hidden;
         }
         .hero img {
@@ -47,12 +56,10 @@
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.15);
+            background: rgba(0,0,0,0.1);
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #fff;
         }
         .explore-btn {
             padding: 15px 40px;
@@ -63,12 +70,7 @@
             letter-spacing: 3px;
             font-size: 12px;
             font-weight: bold;
-            transition: 0.3s;
             border: 1px solid #fff;
-        }
-        .explore-btn:hover {
-            background: transparent;
-            color: #fff;
         }
 
         /* Products Grid */
@@ -80,8 +82,6 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 50px;
         }
-        .product-card { text-align: center; transition: 0.3s; }
-        .product-card:hover { transform: translateY(-5px); }
         .product-card img {
             width: 100%;
             height: 400px;
@@ -89,13 +89,11 @@
             background: #fcfcfc;
             margin-bottom: 20px;
         }
-        .product-card h3 { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
-        .product-card p { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+        .product-card h3 { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
+        .product-card p { font-size: 11px; color: #666; text-transform: uppercase; }
 
-        /* Footer */
-        footer { background: #000; color: #fff; padding: 60px 5%; text-align: center; }
-        .footer-logo img { width: 150px; filter: invert(1); margin-bottom: 30px; }
-        .copy { font-size: 9px; letter-spacing: 2px; color: #444; margin-top: 40px; }
+        footer { background: #000; color: #fff; padding: 40px; text-align: center; }
+        .footer-logo img { width: 150px; filter: invert(1); }
     </style>
 </head>
 <body>
@@ -122,59 +120,20 @@
 
     <section class="shop-section" id="collection">
         <h2 class="section-title">The Collection</h2>
-        
         <div class="product-grid">
-
-            <div class="product-card">
-                <img src="Spicebombextrem.jpg" alt="Spicebomb">
-                <h3>Spicebomb Extreme</h3>
-                <p>Viktor & Rolf</p>
-            </div>
-
-            <div class="product-card">
-                <img src="Jpgultramale.jpg" alt="JPG">
-                <h3>Ultra Male</h3>
-                <p>Jean Paul Gaultier</p>
-            </div>
-
-            <div class="product-card">
-                <img src="Myselflaperfume.jpg" alt="YSL">
-                <h3>MYSLF Le Parfum</h3>
-                <p>Yves Saint Laurent</p>
-            </div>
-
-            <div class="product-card">
-                <img src="Valntinoborninroma.jpg" alt="Valentino">
-                <h3>Born In Roma</h3>
-                <p>Valentino</p>
-            </div>
-
-            <div class="product-card">
-                <img src="Versace.jpg" alt="Versace">
-                <h3>Eros</h3>
-                <p>Versace</p>
-            </div>
-
-            <div class="product-card">
-                <img src="Yslmyselfedp.jpg" alt="YSL">
-                <h3>MYSLF EDP</h3>
-                <p>Yves Saint Laurent</p>
-            </div>
-
-            <div class="product-card">
-                <img src="Ysly.jpg" alt="YSL Y">
-                <h3>Y EDP</h3>
-                <p>Yves Saint Laurent</p>
-            </div>
-
+            <div class="product-card"><img src="Spicebombextrem.jpg"><h3>Spicebomb Extreme</h3><p>Viktor & Rolf</p></div>
+            <div class="product-card"><img src="Jpgultramale.jpg"><h3>Ultra Male</h3><p>JPG</p></div>
+            <div class="product-card"><img src="Myselflaperfume.jpg"><h3>MYSLF Le Parfum</h3><p>YSL</p></div>
+            <div class="product-card"><img src="Valntinoborninroma.jpg"><h3>Born In Roma</h3><p>Valentino</p></div>
+            <div class="product-card"><img src="Versace.jpg"><h3>Eros</h3><p>Versace</p></div>
+            <div class="product-card"><img src="Yslmyselfedp.jpg"><h3>MYSLF EDP</h3><p>YSL</p></div>
+            <div class="product-card"><img src="Ysly.jpg"><h3>Y EDP</h3><p>YSL</p></div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-logo">
-            <img src="Logo.png" alt="Unique Perfumes">
-        </div>
-        <p class="copy">© 2026 UNIQUE PERFUMES. ALL RIGHTS RESERVED.</p>
+        <div class="footer-logo"><img src="Logo.png"></div>
+        <p style="font-size: 9px; letter-spacing: 2px; color: #444; margin-top: 20px;">© 2026 UNIQUE PERFUMES</p>
     </footer>
 
 </body>
