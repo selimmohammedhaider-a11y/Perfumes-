@@ -8,9 +8,9 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #fff; color: #000; scroll-behavior: smooth; }
 
-        /* Navigation - Thinner and Cleaner */
+        /* Navigation - Thin & Fixed */
         header {
-            padding: 0 5%; /* شلنا الـ padding اللي فوق وتحت خالص */
+            padding: 0 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -19,24 +19,20 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            height: 60px; /* ثبتنا الارتفاع بـ 60px بس عشان يبقى رفيع جداً */
+            height: 70px; /* ارتفاع رفيع وشيك */
             border-bottom: 1px solid #f0f0f0;
-            box-shadow: 0 1px 5px rgba(0,0,0,0.03); /* ظل خفيف جداً */
         }
         
-        /* كروص اللوجو لقص المساحات البيضاء الزيادة */
+        /* Logo - Smaller & No Crop */
         .logo {
             display: flex;
             align-items: center;
             height: 100%;
-            width: 150px; /* حددنا عرض لمكان اللوجو */
         }
         .logo img { 
-            height: 120px; /* كبرنا الارتفاع جداً */
-            width: 100%;
-            object-fit: cover; /* دي أهم خاصية! بتعمل crop تلقائي وتخبي الهوامش البيضاء الزيادة */
-            object-position: center top; /* بتظبط مكان القص عشان اللوجو يبقى في النص */
-            margin-top: 5px; /* تظبيط مكان اللوجو */
+            height: 50px; /* صغرنا الارتفاع عشان اللوجو يلم نفسه */
+            width: auto;
+            object-fit: contain; /* بيعرض الصورة كاملة بدون قص */
         }
         
         nav ul { display: flex; list-style: none; }
@@ -44,21 +40,18 @@
         nav ul li a { 
             text-decoration: none; 
             color: #000; 
-            font-size: 10px; /* صغرنا الخط شوية للشياكة */
-            letter-spacing: 2.5px; 
+            font-size: 11px; 
+            letter-spacing: 2px; 
             text-transform: uppercase; 
-            font-weight: bold; 
-            opacity: 0.8;
-            transition: 0.3s;
+            font-weight: bold;
         }
-        nav ul li a:hover { opacity: 1; }
 
         /* Hero Section */
         .hero {
             position: relative;
             width: 100%;
-            height: 85vh; /* زودنا الارتفاع شوية */
-            margin-top: 60px; /* نفس ارتفاع الهيدر الجديد */
+            height: 80vh;
+            margin-top: 70px; /* نفس ارتفاع الهيدر */
             overflow: hidden;
         }
         .hero img {
@@ -69,13 +62,13 @@
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.1); /* شفافية أخف */
+            background: rgba(0,0,0,0.1);
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .explore-btn {
-            padding: 16px 45px;
+            padding: 15px 40px;
             background: #fff;
             color: #000;
             text-decoration: none;
@@ -94,22 +87,22 @@
         
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* تظبيط العرض للموبايل */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
         }
         .product-card { text-align: center; }
         .product-card img {
             width: 100%;
-            height: 350px; /* صغرنا الطول شوية عشان يبقوا كلهم نفس الطول */
+            height: 350px;
             object-fit: contain;
             background: #fcfcfc;
             margin-bottom: 20px;
         }
         .product-card h3 { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; }
-        .product-card p { font-size: 11px; color: #666; text-transform: uppercase; margin-bottom: 5px; }
+        .product-card p { font-size: 11px; color: #666; text-transform: uppercase; }
 
         footer { background: #000; color: #fff; padding: 40px; text-align: center; }
-        .footer-logo img { width: 150px; filter: invert(1); }
+        .footer-logo img { width: 120px; filter: invert(1); }
     </style>
 </head>
 <body>
@@ -148,7 +141,7 @@
     </section>
 
     <footer>
-        <div class="footer-logo"><img src="Logo.png"></div>
+        <div class="footer-logo"><img src="Logo.png" style="height: 40px; width: auto; object-fit: contain;"></div>
         <p style="font-size: 9px; letter-spacing: 2px; color: #444; margin-top: 20px;">© 2026 UNIQUE PERFUMES</p>
     </footer>
 
